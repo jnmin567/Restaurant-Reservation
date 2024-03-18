@@ -52,11 +52,11 @@ function ReservationDetail({ res }) {
         </td>
         <td>
           {reservation.status === 'booked' ?
-          <a href={`/reservations/${reservation.reservation_id}/edit`}>
-            <button className="btn btn-primary "> Edit </button>
-          </a>
-          :
-          <></>
+            <Link to={`/reservations/${reservation.reservation_id}/edit`}>
+              <button className="btn btn-primary"> Edit </button>
+            </Link>
+            :
+            <></>
           }
         </td>
         <td data-reservation-id-cancel={reservation.reservation_id}>
